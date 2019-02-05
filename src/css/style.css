@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  tex-decoration: none;
+}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
+  color: $dropdown-text;
+}
+body,
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #575757;
+}
