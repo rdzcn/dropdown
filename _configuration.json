@@ -1,0 +1,25 @@
+{
+  "toggle": 
+    {
+      "toggleTitle": "Menu",
+      "toggleIconName": "arrow-down",
+    },
+  "body": 
+    {
+      "placeBodyDelete": "top-right",
+      "body": {
+        "type": {
+          "text": true,
+          "listOfComponents": false,
+          "singleComponent": false
+        },
+        "content": {
+          "text": "Proin mollis gravida sem, at imperdiet diam dapibus at. Donec elit risus, volutpat ac tristique a, porta a sem. Pellentesque nec vulputate enim. Phasellus iaculis eu tellus vestibulum pretium. Proin a mollis ipsum, ac laoreet.",
+          "nameListComponents": "",
+        }
+
+        "type": "text",
+        "component": "<Text />" 
+      }
+    }
+}
