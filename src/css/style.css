@@ -7,7 +7,7 @@ li {
   list-style: none;
 }
 a {
-  tex-decoration: none;
+  text-decoration: none;
 }
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 h1,
@@ -23,32 +23,144 @@ body,
 html {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  color: #575757;
+  color: #757575;
 }
-.dd-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: #f8f8f6;
-  height: 20vh;
-  width: 20vw;
-}
-.dd-wrapper .dd-toggle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #f00;
-}
-.dd-wrapper .dd-body {
-  display: flex;
-  border: 1px solid #00f;
-}
-.container {
+.app-container {
   display: flex;
   justify-content: center;
   align-items: center;
   background: #f8f8f6;
   height: 100vh;
   width: 100vw;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  box-shadow: 0 0 5px 2px rgba(117,117,117,0.1);
+  border-radius: 4px;
+  background: #fff;
+}
+.card .card-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  background: #fff;
+  border-radius: 4px;
+}
+.card .card-item:first-child {
+  width: 100%;
+  border-top: 1px solid rgba(117,117,117,0.2);
+  background: #f8f8f6;
+}
+.card .card-item:last-child {
+  width: 100%;
+  border-bottom: 1px solid rgba(117,117,117,0.2);
+}
+.card .card-item:nth-last-child(2) {
+  border-bottom: 1px solid rgba(117,117,117,0.2);
+}
+.card .component {
+  height: 5rem;
+}
+.card .dd-container {
+  height: 2rem;
+  justify-content: flex-end;
+}
+.card .image-container img {
+  padding: 1rem;
+  border-radius: 4px;
+}
+.dd-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: inherit;
+  position: relative;
+}
+.dd-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-size: 0.875rem;
+}
+.dd-toggle .dd-toggle-title {
+  font-size: 0.875rem;
+}
+.dd-toggle .dd-toggle-icon {
+  font-size: 0.875rem;
+  margin-left: 0.33rem;
+  width: 1rem;
+}
+.dd-body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background: #f8f8f6;
+  position: absolute;
+  right: 0;
+  top: -1rem;
+  z-index: 2;
+  width: 15.625rem;
+}
+.dd-body .body-content {
+  font-size: 0.875rem;
+}
+.dd-body .body-content a {
+  color: #757575;
+}
+.dd-body .body-content a:visited,
+.dd-body .body-content a:link {
+  color: #757575;
+}
+.dd-body .body-close {
+  font-size: 0.875rem;
+  border-bottom: 0.5px solid #757575;
+  align-self: flex-end;
+  width: 100%;
+}
+@font-face {
+  font-family: 'practiceFonts';
+  src: url("fonts/practiceFonts.eot");
+  src: url("fonts/practiceFonts.eot#iefix") format('embedded-opentype'), url("fonts/practiceFonts.ttf") format('truetype'), url("fonts/practiceFonts.woff") format('woff'), url("fonts/practiceFonts.svg#practiceFonts") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+i {
+  font-family: 'practiceFonts' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: 700;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+/* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-close:before {
+  content: "\e900";
+}
+.icon-down-arrow:before {
+  content: "\e901";
+}
+.icon-info:before {
+  content: "\e902";
+}
+.icon-left-arrow:before {
+  content: "\e903";
+}
+.icon-minimize:before {
+  content: "\e904";
+}
+.icon-right-arrow:before {
+  content: "\e905";
+}
+.icon-up-arrow:before {
+  content: "\e906";
 }

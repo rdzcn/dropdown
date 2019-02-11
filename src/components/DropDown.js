@@ -8,16 +8,16 @@ class DropDown extends React.Component {
     placeX: 0,  
     placeY: 0
   }
-  toggleDropDownBody = () => {
+  toggleDropDown = () => {
     this.setState(prevState => ({
       isOpen: !prevState.isOpen
     }))
   }
   render() {
+    const { title, iconName } = this.props;
     return (
       <div className="dd-wrapper">
-        <Toggle toggleDropDownBody={this.toggleDropDownBody} />
-        { this.state.isOpen ? <Body /> : null }
+        { this.state.isOpen ? <Body toggleDropDown={this.toggleDropDown}/> : <Toggle title={title} iconName={iconName} toggleDropDown={this.toggleDropDown}/> }
       </div>
     )
   }
