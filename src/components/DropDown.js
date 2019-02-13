@@ -5,12 +5,14 @@ import Body from './Body';
 class DropDown extends React.Component {
   state = {
     isOpen: false,
-    placeX: 0,  
-    placeY: 0
+    opensToTop: false
   }
-  toggleDropDown = () => {
+  toggleDropDown = (event) => {
+    const togglePosY = event.clientY;
+    const windowHeight = window.innerHeight;
     this.setState(prevState => ({
-      isOpen: !prevState.isOpen
+      isOpen: !prevState.isOpen,
+      opensToTop: togglePosY > windowHeight / 2
     }))
   }
   render() {

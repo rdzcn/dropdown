@@ -5,15 +5,16 @@ const Body = (props) => {
   return (
     <div className="dd-body">
       <div className="body-close" onClick={props.toggleDropDown}>
+        <span className="close-label">Close</span>
         <i className="icon-close"></i>
       </div>
       <div className="body-content">
         <ul>
-          <li><Link to="#">Contact user</Link> </li>
-          <li><Link to="#">Send link</Link> </li>
-          <li><Link to="#">Hide post</Link> </li>
-          <li><Link to="#">Snooze user</Link> </li>
-          <li><Link to="#">Report post</Link> </li>
+          <Link to="#"><li>Contact user</li></Link>
+          <Link to="#"><li>Send link</li></Link>
+          <Link to="#"><li>Hide post</li></Link>
+          <Link to="#"><li>Snooze user</li></Link>
+          <Link to="#"><li>Report post</li></Link>
         </ul>
       </div>
     </div>

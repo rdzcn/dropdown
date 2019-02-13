@@ -87,12 +87,12 @@ html {
   justify-content: center;
   align-items: baseline;
   font-size: 0.875rem;
+  cursor: pointer;
 }
 .dd-toggle .dd-toggle-title {
   font-size: 0.875rem;
 }
 .dd-toggle .dd-toggle-icon {
-  font-size: 0.875rem;
   margin-left: 0.33rem;
   width: 1rem;
 }
@@ -103,26 +103,51 @@ html {
   flex-direction: column;
   background: #f8f8f6;
   position: absolute;
-  right: 0;
-  top: -1rem;
+  right: 1rem;
+  top: 0;
   z-index: 2;
   width: 15.625rem;
+  border-radius: 4px;
 }
 .dd-body .body-content {
   font-size: 0.875rem;
+  width: 100%;
 }
 .dd-body .body-content a {
-  color: #757575;
+  display: block;
+  width: 100%;
+  color: inherit;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0.7rem 0.9rem;
 }
 .dd-body .body-content a:visited,
 .dd-body .body-content a:link {
   color: #757575;
 }
+.dd-body .body-content a:hover {
+  color: #fff;
+  background: #799189;
+}
+.dd-body .body-content a li {
+  line-height: 1.25rem;
+}
 .dd-body .body-close {
-  font-size: 0.875rem;
-  border-bottom: 0.5px solid #757575;
+  padding: 0.5rem;
   align-self: flex-end;
-  width: 100%;
+  font-size: 0.625rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.dd-body .body-close:hover {
+  color: #575757;
+}
+.dd-body .body-close .close-label {
+  margin-right: 0.75rem;
+}
+.dd-body .body-close .icon-close {
+  font-size: 0.5rem;
+  font-weight: 600;
 }
 @font-face {
   font-family: 'practiceFonts';
@@ -135,10 +160,11 @@ i {
   font-family: 'practiceFonts' !important;
   speak: none;
   font-style: normal;
-  font-weight: 700;
+  font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
+  line-height: 0.875rem;
+  font-size: 0.875rem;
 /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
