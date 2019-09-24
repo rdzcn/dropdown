@@ -10,16 +10,17 @@ class DropDown extends React.Component {
   toggleDropDown = (event) => {
     const togglePosY = event.clientY;
     const windowHeight = window.innerHeight;
-    this.setState(prevState => ({
-      isOpen: !prevState.isOpen,
+    this.setState({
+      isOpen: !this.state.isOpen,
       opensToTop: togglePosY > windowHeight / 2
-    }))
+    })
   }
   render() {
     const { title, iconName } = this.props;
+    const { opensToTop, isOpen } = this.state;
     return (
       <div className="dd-wrapper">
-        { this.state.isOpen ? <Body toggleDropDown={this.toggleDropDown}/> : <Toggle title={title} iconName={iconName} toggleDropDown={this.toggleDropDown}/> }
+        { isOpen ? <Body toggleDropDown={this.toggleDropDown} opensToTop={opensToTop} /> : <Toggle title={title} iconName={iconName} toggleDropDown={this.toggleDropDown}/> }
       </div>
     )
   }

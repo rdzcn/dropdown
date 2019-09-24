@@ -96,24 +96,33 @@ html {
   margin-left: 0.33rem;
   width: 1rem;
 }
-.dd-body {
+.dd-body,
+.dd-body-downward,
+.dd-body-upward {
+  z-index: 2;
+  width: 15.625rem;
+  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   background: #f8f8f6;
+}
+.dd-body-downward {
   position: absolute;
   right: 1rem;
   top: 0;
-  z-index: 2;
-  width: 15.625rem;
-  border-radius: 4px;
 }
-.dd-body .body-content {
+.dd-body-upward {
+  position: absolute;
+  right: 1rem;
+  bottom: 0;
+}
+.body-content {
   font-size: 0.875rem;
   width: 100%;
 }
-.dd-body .body-content a {
+.body-content a {
   display: block;
   width: 100%;
   color: inherit;
@@ -121,31 +130,31 @@ html {
   line-height: 1.25rem;
   padding: 0.7rem 0.9rem;
 }
-.dd-body .body-content a:visited,
-.dd-body .body-content a:link {
+.body-content a:visited,
+.body-content a:link {
   color: #757575;
 }
-.dd-body .body-content a:hover {
+.body-content a:hover {
   color: #fff;
   background: #799189;
 }
-.dd-body .body-content a li {
+.body-content a li {
   line-height: 1.25rem;
 }
-.dd-body .body-close {
+.body-close {
   padding: 0.5rem;
   align-self: flex-end;
   font-size: 0.625rem;
   font-weight: 600;
   cursor: pointer;
 }
-.dd-body .body-close:hover {
+.body-close:hover {
   color: #575757;
 }
-.dd-body .body-close .close-label {
+.body-close .close-label {
   margin-right: 0.75rem;
 }
-.dd-body .body-close .icon-close {
+.body-close .icon-close {
   font-size: 0.5rem;
   font-weight: 600;
 }

@@ -1,46 +1,57 @@
 .dd-body
+  z-index 2
+  width 15.625rem
+  border-radius $border-radius
   display flex
   justify-content center
   align-items flex-start
   flex-direction column
   background $dd-background
+
+.dd-body-downward
+  @extends .dd-body
   position absolute
   right 1rem
   top 0
-  z-index 2
-  width 15.625rem
-  border-radius $border-radius
-  .body-content
-    font-size 0.875rem
-    width 100%
-    a 
-      display block
-      width 100%
-      color inherit
-      font-size 0.875rem
-      line-height 1.25rem
-      padding 0.7rem 0.9rem
-      &:visited, &:link
-        color $dd-text
-      &:hover
-        color #fff
-        background $dd-li-hover
-      li
-        line-height 1.25rem
 
-  .body-close
-    padding 0.5rem 
-    align-self flex-end
-    font-size 0.625rem
-    font-weight 600
-    cursor pointer
+.dd-body-upward
+  @extends .dd-body
+  position absolute
+  right 1rem
+  bottom 0
+
+.body-content
+  font-size 0.875rem
+  width 100%
+  a 
+    display block
+    width 100%
+    color inherit
+    font-size 0.875rem
+    line-height 1.25rem
+    padding 0.7rem 0.9rem
+    &:visited, &:link
+      color $dd-text
     &:hover
-      color $dd-hover
-    .close-label
-      margin-right 0.75rem
-    .icon-close
-      font-size 0.5rem
-      font-weight 600
+      color #fff
+      background $dd-li-hover
+    li
+      line-height 1.25rem
+
+.body-close
+  padding 0.5rem 
+  align-self flex-end
+  font-size 0.625rem
+  font-weight 600
+  cursor pointer
+  &:hover
+    color $dd-hover
+  .close-label
+    margin-right 0.75rem
+  .icon-close
+    font-size 0.5rem
+    font-weight 600
+
 
 
 

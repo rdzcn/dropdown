@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Body = (props) => {
   return (
-    <div className="dd-body">
+    <div className={props.opensToTop ? "dd-body-upward" : "dd-body-downward"}>
       <div className="body-close" onClick={props.toggleDropDown}>
         <span className="close-label">Close</span>
         <i className="icon-close"></i>
